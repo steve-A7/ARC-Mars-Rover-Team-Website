@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-mars-red: #ffb4ab;
+  --color-mars-red-dark: #921d1a;
+  --color-mars-orange: #ffb77a;
+  --color-mars-amber: #ffba38;
+  --color-mars-bg: #121416;
+  --color-mars-surface: #1e2022;
+  --color-mars-outline: #58413f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-mars-bg text-zinc-300 font-body selection:bg-mars-red/30 selection:text-white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-xl bg-zinc-900/60 border border-white/5;
+  }
+  
+  .glow-red {
+    @apply shadow-[0_0_20px_rgba(255,180,171,0.2)];
+  }
+
+  .glow-amber {
+    @apply shadow-[0_0_20px_rgba(255,186,56,0.2)];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-mars-red/20 rounded-full hover:bg-mars-red/40 transition-colors;
+}
+
+/* Dust Particles Animation */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  20% { opacity: 0.4; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(-100vh) translateX(20vw); opacity: 0; }
+}
+
+.dust-particle {
+  @apply absolute rounded-full bg-white pointer-events-none;
+  animation: float 20s infinite linear;
+}
+
+/* Mars Sphere Glow */
+.mars-sphere {
+  @apply absolute rounded-full pointer-events-none opacity-20 blur-[2px];
+  background: radial-gradient(circle at 30% 30%, #ff4d29, #8b1815 60%, #121416 100%);
+  box-shadow: inset -20px -20px 50px rgba(0,0,0,0.8), 0 0 40px rgba(255, 77, 41, 0.2);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+/* Multi-color gradient text shift keyframes */
+@keyframes gradient-text-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle continuous floating & breathing animation for the title */
+@keyframes title-breathing {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 0 15px rgba(255, 180, 171, 0.15));
+  }
+  50% {
+    transform: translateY(-8px) scale(1.015);
+    filter: drop-shadow(0 0 35px rgba(255, 186, 56, 0.35));
+  }
+}
+
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: gradient-text-shift 8s ease infinite;
+}
+
+.animate-title-breathing {
+  animation: title-breathing 6s ease-in-out infinite;
+}
+

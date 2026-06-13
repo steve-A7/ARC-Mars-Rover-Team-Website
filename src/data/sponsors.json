@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Intel",
+      "website": "https://intel.com",
+      "logo": "/Sponsor/intel.png"
+    },
+    {
+      "name": "NVIDIA",
+      "website": "https://nvidia.com",
+      "logo": "/Sponsor/nvidia.png"
+    },
+    {
+      "name": "SpaceX",
+      "website": "https://spacex.com",
+      "logo": "/Sponsor/spacex.png"
+    },
+    {
+      "name": "Autodesk",
+      "website": "https://autodesk.com",
+      "logo": "/Sponsor/autodesk.png"
+    },
+    {
+      "name": "Xiaomi",
+      "website": "https://mi.com",
+      "logo": "/Sponsor/xiaomi.png"
+    }
+  ]
+}

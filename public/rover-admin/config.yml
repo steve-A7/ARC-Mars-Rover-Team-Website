@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public"
+public_folder: "/"
+
+collections:
+  - name: "data"
+    label: "Data Management"
+    files:
+      - file: "src/data/timeline.json"
+        label: "Timeline Event Log"
+        name: "timeline"
+        media_folder: "public/Timeline"
+        public_folder: "/Timeline"
+        fields:
+          - label: "Timeline Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Type", name: "type", widget: "select", options: ["youtube", "photo", "video"] }
+              - { label: "Media File (Upload photo/video or enter URL)", name: "media", widget: "file" }
+              - { label: "Lucide Icon Name", name: "icon", widget: "select", options: ["Clapperboard", "Flag", "Compass", "Globe", "FileCheck", "Award", "Sparkles", "Rocket", "Cpu", "Database", "Wrench", "Activity", "Radio", "Flame", "Map", "Layers", "BatteryCharging", "Bot", "Camera", "Gauge", "Lightbulb", "ShieldAlert", "Eye", "Zap", "Terminal", "Milestone", "Search", "Share2", "TrendingUp", "Trophy", "Heart", "Wifi"] }
+              - { label: "Color Class", name: "color", widget: "select", options: ["text-mars-red", "text-mars-amber", "text-mars-orange", "text-emerald-400"] }
+      - file: "src/data/sponsors.json"
+        label: "Sponsor Deck"
+        name: "sponsors"
+        media_folder: "public/SponsorRes"
+        public_folder: "/SponsorRes"
+        fields:
+          - label: "Sponsor Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Sponsor Name", name: "name", widget: "string" }
+              - { label: "Website URL", name: "website", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }

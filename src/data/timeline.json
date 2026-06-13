@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "year": "2016",
+      "title": "ARC URC 2016 Promotional Rover Demo",
+      "type": "youtube",
+      "media": "https://www.youtube.com/embed/VXFxQdWl8ow",
+      "icon": "Clapperboard",
+      "color": "text-mars-red"
+    },
+    {
+      "year": "2016",
+      "title": "URC 2016 Participation",
+      "type": "photo",
+      "media": "/Timeline/ARC_URC_2016.jpg",
+      "icon": "Flag",
+      "color": "text-mars-amber"
+    },
+    {
+      "year": "2017",
+      "title": "URC 2017 Participation",
+      "type": "photo",
+      "media": "/Timeline/ARC_URC_2017.jpg",
+      "icon": "Compass",
+      "color": "text-mars-orange"
+    },
+    {
+      "year": "2018",
+      "title": "URC 2018 Participation",
+      "type": "photo",
+      "media": "/Timeline/ARC_URC_2018.png",
+      "icon": "Globe",
+      "color": "text-emerald-400"
+    },
+    {
+      "year": "2019",
+      "title": "ARC URC 2019 SAR Review",
+      "type": "youtube",
+      "media": "https://www.youtube.com/embed/1A1IkjZbMoo",
+      "icon": "FileCheck",
+      "color": "text-mars-red"
+    },
+    {
+      "year": "2019",
+      "title": "URC 2019 Participation",
+      "type": "photo",
+      "media": "/Timeline/ARC_URC_2019.png",
+      "icon": "Award",
+      "color": "text-mars-amber"
+    },
+    {
+      "year": "2023",
+      "title": "ARC VPR 2023 Showcase Video",
+      "type": "youtube",
+      "media": "https://www.youtube.com/embed/N-pYydDFbco",
+      "icon": "Sparkles",
+      "color": "text-mars-orange"
+    }
+  ]
+}
