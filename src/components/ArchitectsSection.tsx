@@ -158,7 +158,7 @@ const teams: Team[] = [
       { 
         name: 'MD.Arifullah', 
         role: 'Spectroscopy & Environmental Analyst', 
-        image: '/TeamMembers/Science Team_Md.Arifullah.HEIC',
+        image: '/TeamMembers/Science Team_Md.Arifullah.jpg',
         quote: 'Calibrating atmospheric sensors, assessing radiation, and profiling Martian mineral strata.',
         email: '23-55315-3@student.aiub.edu'
       }
