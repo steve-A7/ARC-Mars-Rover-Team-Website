@@ -16,7 +16,8 @@ import {
   Navigation as NavigationIcon,
   Package,
   Wrench,
-  FlaskConical
+  FlaskConical,
+  Code
 } from 'lucide-react';
 import { BackgroundEffects } from './components/BackgroundEffects';
 import { ArchitectsSection } from './components/ArchitectsSection';
@@ -345,8 +346,8 @@ export default function App() {
 
         {/* Support Us Section */}
         <section id="sponsor-us" className="py-32 px-6 lg:px-24">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            <div className="lg:col-span-5">
               <h2 className="font-headline text-5xl md:text-6xl font-bold tracking-tighter mb-8 uppercase">
                 Join The <br/>
                 <span className="text-mars-red">Expedition</span>
@@ -367,12 +368,12 @@ export default function App() {
                   <div className="w-12 h-12 glass-panel rounded-2xl flex items-center justify-center text-mars-red">
                     <Mail size={20} />
                   </div>
-                  <span className="font-label text-xs tracking-widest uppercase">mission-control@ares-rover.com</span>
+                  <span className="font-label text-xs tracking-widest uppercase">ebad.zahir@aiub.edu</span>
                 </div>
               </div>
             </div>
 
-            <div className="glass-panel rounded-3xl p-10 relative">
+            <div className="glass-panel rounded-3xl p-10 relative lg:col-span-7 w-full shadow-[0_0_50px_rgba(0,0,0,0.5)]">
               <div className="absolute -top-4 -right-4 bg-mars-amber text-black px-4 py-1 text-[10px] font-label font-bold tracking-widest uppercase rounded-full">
                 Encrypted Line
               </div>
@@ -384,20 +385,20 @@ export default function App() {
                     type="text" 
                     value={orgName}
                     onChange={(e) => setOrgName(e.target.value)}
-                    className={`w-full bg-zinc-900/50 border ${formErrors.orgName ? 'border-mars-red' : 'border-zinc-800/80'} rounded-2xl px-4 py-3.5 focus:border-mars-red focus:bg-zinc-900/80 transition-all outline-none text-white font-body`}
-                    placeholder="ENTITY_ID"
+                    className={`w-full bg-zinc-900/50 border ${formErrors.orgName ? 'border-mars-red' : 'border-zinc-800/80'} rounded-2xl px-4 py-3.5 focus:border-mars-red focus:bg-zinc-900/80 transition-all outline-none text-white font-body placeholder:text-[10px] md:placeholder:text-[11px] lg:placeholder:text-xs xl:placeholder:text-sm`}
+                    placeholder="ORGANIZATION INFORMATION [PLEASE INCLUDE CONTACT INFORMATION]"
                   />
                   {formErrors.orgName && (
                     <motion.p initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="text-mars-red text-xs font-label uppercase tracking-wider">{formErrors.orgName}</motion.p>
                   )}
                 </div>
                 <div className="space-y-2">
-                  <label className="block text-[10px] font-label text-zinc-500 uppercase tracking-widest">Transmission message</label>
+                  <label className="block text-[10px] font-label text-zinc-500 uppercase tracking-widest">Transmission Message</label>
                   <textarea 
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className={`w-full bg-zinc-900/50 border ${formErrors.message ? 'border-mars-red' : 'border-zinc-800/80'} rounded-2xl px-4 py-3.5 focus:border-mars-red focus:bg-zinc-900/80 transition-all outline-none text-white font-body resize-none`}
-                    placeholder="INPUT_DATA..."
+                    placeholder="INPUT MESSAGE..."
                     rows={4}
                   />
                   {formErrors.message && (
@@ -450,12 +451,10 @@ export default function App() {
             © 2026 Aiub Robotics Crew. All Systems Nominal.
           </div>
 
-          <div className="flex gap-8">
-            {['Telemetry', 'Privacy', 'Terminal'].map((item) => (
-              <a key={item} href="#" className="font-label text-[10px] tracking-widest uppercase text-zinc-500 hover:text-mars-red transition-colors">
-                {item}
-              </a>
-            ))}
+          <div className="flex items-center gap-2 font-label text-[10px] sm:text-xs tracking-widest text-zinc-400 group border border-white/5 bg-zinc-950/40 hover:border-mars-red/30 hover:bg-zinc-900/40 px-4 py-2 rounded-full transition-all duration-300">
+            <Code className="w-3.5 h-3.5 text-mars-red group-hover:text-amber-400 transition-all duration-300 transform group-hover:rotate-12" />
+            <span className="uppercase text-[9px] sm:text-[10px] text-zinc-500 font-semibold select-none">Developed By:</span>
+            <span className="text-white group-hover:text-amber-400 font-mono font-bold transition-colors duration-300">Stephen Argho Das</span>
           </div>
         </div>
       </footer>

@@ -18,7 +18,7 @@ app.post("/api/broadcast", async (req, res) => {
     return res.status(400).json({ error: "Organization Name and Transmission message are required." });
   }
 
-  const targetEmail = "steve900032@gmail.com";
+  const targetEmail = "23-54439-3@student.aiub.edu";
 
   // Embedded user SMTP credentials for local & direct execution
   const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
@@ -71,7 +71,7 @@ app.post("/api/broadcast", async (req, res) => {
       `,
     });
 
-    console.log(`Transmission successfully dispatched to steve900032@gmail.com! MessageId: ${info.messageId}`);
+    console.log(`Transmission successfully dispatched to 23-54439-3@student.aiub.edu! MessageId: ${info.messageId}`);
     res.json({ success: true, message: "Transmission successfully beamed to Mission Control." });
   } catch (err: any) {
     console.error("Transit delivery failure:", err);

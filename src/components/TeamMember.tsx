@@ -121,6 +121,32 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
           {name}
         </h3>
 
+        {/* Educational Details */}
+        {(() => {
+          const normalized = name.trim().toLowerCase();
+          const isCSE = [
+            'abdullah al nahian abir',
+            'muksitul jahan ziad',
+            'farhan sadik fahim',
+            'stephen argho das'
+          ].includes(normalized);
+
+          return (
+            <>
+              <div className="mt-2 text-zinc-300 font-label tracking-wide text-[10px] sm:text-xs uppercase font-semibold leading-normal">
+                {isCSE 
+                  ? 'Bachelor of Science in Computer Science & Engineering' 
+                  : 'Bachelor of Science in Electrical & Electronic Engineering'}
+              </div>
+              <div className="text-zinc-500 font-body text-[9px] sm:text-xs mt-0.5">
+                {isCSE 
+                  ? 'Faculty of Science & Technology, AIUB' 
+                  : 'Faculty of Engineering, AIUB'}
+              </div>
+            </>
+          );
+        })()}
+
         {/* Action Button Row: Aligned middle next and below the name */}
         <div className="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-4">
           {/* Clicking Open Toggler */}
